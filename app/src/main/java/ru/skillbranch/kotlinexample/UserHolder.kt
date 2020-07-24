@@ -27,7 +27,7 @@ object UserHolder {
         val user = User.makeUser(fullName, phone = rawPhone)
 
         if (user.login.first() != '+' || user.login.length != 12) {
-            throw IllegalArgumentException("Error phone")
+            throw IllegalArgumentException("Enter a valid phone number starting with a + and containing 11 digits")
         }
 
         if (map[rawPhone] != null) {
